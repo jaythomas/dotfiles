@@ -1,0 +1,5 @@
+unset mouse
+set nohelp
+set nonewlines
+
+include /usr/share/nano/*

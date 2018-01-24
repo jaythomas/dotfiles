@@ -1,3 +1,4 @@
 *
 !.gitignore
+!.nanorc
 !.tmux.conf
