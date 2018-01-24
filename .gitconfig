@@ -1,0 +1,8 @@
+[user]
+	name = Jay Thomas
+	email = jay@gfax.ch
+[credential]
+	helper = cache
+[alias]
+	logp = !git log --pretty=format:\"- %H %s\" $1^
+	last = log -1 HEAD
