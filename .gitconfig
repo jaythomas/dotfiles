@@ -6,3 +6,5 @@
 [alias]
 	logp = !git log --pretty=format:\"- %H %s\" $1^
 	last = log -1 HEAD
+[remote "origin"]
+	prune = true
