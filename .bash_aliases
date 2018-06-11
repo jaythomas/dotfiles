@@ -1,7 +1,7 @@
 # Shell aliases
 alias a='aria2c'
-alias boincmgr='cd /home/lite/.boinc/ && boincmgr'
-alias boincd='boinc_client --allow_remote_gui_rpc --dir /home/lite/.boinc --daemon'
+alias boincmgr='cd ~/.boinc/ && boincmgr'
+alias boincd='boinc_client --allow_remote_gui_rpc --dir ~/.boinc --daemon'
 alias clock='clockywock'
 alias count='find . -type f | wc -l'
 alias curlip='curl ifconfig.co'
@@ -18,7 +18,7 @@ alias l.="ls -a | egrep '^\.'"
 alias la='ls -a'
 alias ll='ls -lah'
 alias ls='ls --color=auto'
-alias hubble='sshfs root@hubble:/ /home/lite/hubble/'
+alias hubble='sshfs -p 122 root@x.gfax.ch:/ ~/hubble/'
 alias mirrors='sudo reflector --score 100 --fastest 25 --sort rate --save /etc/pacman.d/mirrorlist --verbose'
 alias m='mplayer'
 alias merge='xrdb -merge ~/.Xresources'
