@@ -8,6 +8,9 @@
 !.config/rofi/
 !.config/rofi/*
 
+!.config/terminator/
+!.config/terminator/*
+
 !.gitconfig
 !.gitignore
 !.nanorc

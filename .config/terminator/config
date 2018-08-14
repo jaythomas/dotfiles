@@ -1,0 +1,21 @@
+[global_config]
+  inactive_color_offset = 1.0
+[keybindings]
+  help = <Primary><Shift>Delete
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.72
+    cursor_color = "#aaaaaa"
+    font = UbuntuMono Nerd Font Mono Bold 12
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
