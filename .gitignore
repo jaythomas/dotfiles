@@ -1,5 +1,13 @@
 *
 !.bash_aliases
+
+# Don't ignore .config but ignore its contents
+!.config/
+.config/*
+
+!.config/rofi/
+!.config/rofi/*
+
 !.gitconfig
 !.gitignore
 !.nanorc
