@@ -2,6 +2,7 @@
 alias a='aria2c'
 alias boincmgr='cd ~/.boinc/ && boincmgr'
 alias boincd='boinc_client --allow_remote_gui_rpc --dir ~/.boinc --daemon'
+alias ccat='pygmentize'
 alias clock='clockywock'
 alias count='find . -type f | wc -l'
 alias curlip='curl ifconfig.co'
