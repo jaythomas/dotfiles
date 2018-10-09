@@ -1,0 +1,20 @@
+# ack is a tool like grep, designed for programmers with large trees of heterogeneous source code
+#t http://betterthangrep.com/
+
+# Always color, even if piping to a another program
+--color
+
+# Use "less −r" as my pager
+--pager=less
+
+--ignore-dir=.idea/
+--ignore-dir=node_modules/
+--ignore-dir=tmp
+
+--type-add=css=scss
+--type-add=ruby=.haml,.rselm,.feature,.ru,.lock
+--type-set=coffeescript=.coffee
+--type-set=coffee=.coffee
+--type-set=coffee=.coffee
+--type-set=feature=.feature
+--type-set=json=.json

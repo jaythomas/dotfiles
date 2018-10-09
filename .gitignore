@@ -1,4 +1,6 @@
 *
+
+!.ackrc
 !.bash_aliases
 
 # Don't ignore .config but ignore its contents
