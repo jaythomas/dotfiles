@@ -13,6 +13,10 @@
 !.config/terminator/
 !.config/terminator/*
 
+!.gnupg/
+.gnupg/*
+!.gnupg/gpg-agent.conf
+
 !.gitconfig
 !.gitignore
 !.nanorc
