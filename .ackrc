@@ -9,6 +9,8 @@
 
 --ignore-dir=.idea/
 --ignore-dir=node_modules/
+--ignore-dir=public/assets/
+--ignore-dir=public/bundles/
 --ignore-dir=tmp
 
 --type-add=css=scss
