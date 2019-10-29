@@ -8,6 +8,7 @@
 --pager=less
 
 --ignore-dir=.idea/
+--ignore-dir=coverage/
 --ignore-dir=node_modules/
 --ignore-dir=public/assets/
 --ignore-dir=public/bundles/
