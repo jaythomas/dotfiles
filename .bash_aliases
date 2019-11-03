@@ -6,7 +6,7 @@ alias corefreq-init='sudo modprobe corefreqk && sudo systemctl start corefreqd &
 alias count='find . -type f | wc -l'
 alias curlip='curl ifconfig.co'
 alias dfa='df  --total -l -xtmpfs -x rootfs -x devtmpfs -h | grep --color=never -e t'
-alias dockerkiller='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+alias dockerkiller='docker stop $(docker ps -a -q) && docker rmi $(docker images -q) --force'
 alias du='du -hs'
 alias dir='ls --color=auto --format=vertical'
 alias egrep='egrep --color=auto'
