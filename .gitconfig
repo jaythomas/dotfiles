@@ -6,7 +6,10 @@
 [alias]
 	logp = !git log --pretty=format:\"- %H %s\" $1^
 	last = log -1 HEAD
+	latest = describe --tags --abbrev=0
 [remote "origin"]
 	prune = true
 [commit]
 	gpgsign = true
+[advice]
+	detachedHead = false
