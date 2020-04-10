@@ -12,6 +12,7 @@ alias dir='ls --color=auto --format=vertical'
 alias egrep='egrep --color=auto'
 alias f='find / -iname 2>/dev/null'
 alias fgrep='fgrep --color=auto'
+alias greg="grep --color=auto"
 alias joystick='sudo xboxdrv --detach-kernel-driver --led 2 --silent'
 alias l='ls'
 alias l.="ls -a | egrep '^\.'"
