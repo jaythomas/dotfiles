@@ -22,13 +22,12 @@ fi
 # Prompt
 autoload -Uz vcs_info # Load module to fetch version control info
 precmd() { vcs_info } # Refresh the info every prompt
-#zstyle ':vcs_info:git:*' formats '%b' # Format the vcs_info_msg_0_ - %b is branch name
-zstyle ':vcs_info:git:*' formats '%F{$c5%}%b' # Format the vcs_info_msg_0_ variable
+# http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Version-Control-Information
+zstyle ':vcs_info:git:*' formats '%F{$c5%}%b' # Format the vcs_info_msg_0_ variable (%b=branch)
 setopt PROMPT_SUBST # http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
 
 prompt_user='%(!.%F{$c1}.%F{$c2})%n%f'
 prompt_host='%F{$c3}%m%f:%F{$c4}'
-#PROMPT='%(!.%F{$c1}.%F{$c2})%n%f@%F{$c3}%m%f:%{$(pwd|grep --color=always /)%${#PWD}G%} '
 PROMPT="${prompt_user}@${prompt_host}%~ %F{$c0%}"
 RPROMPT='${vcs_info_msg_0_} %F{$c6}%?'
 
@@ -100,5 +99,5 @@ source ~/.bash_aliases
 #antibody bundle < ~/.zsh_plugins
 
 # Node/Yarn
-#source /usr/share/nvm/init-nvm.sh # Slows down terminal startup
+eval "$(fnm env --multi)"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
