@@ -84,6 +84,9 @@ export GPG_TTY=$(tty)
 # Fix broken tmux-256color bindings
 bindkey '^[[1~' beginning-of-line
 bindkey '^[[4~' end-of-line
+# Partial history match with up/down arrow keys
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
 
 export GREP_COLOR='1;36'
 
@@ -101,3 +104,6 @@ source ~/.bash_aliases
 # Node/Yarn
 eval "$(fnm env --multi)"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
