@@ -78,16 +78,43 @@ setopt pushdminus
 setopt pushdsilent # Do not print the directory stack after pushd or popd
 setopt share_history
 
+#
+# Key bindings
+#
+
+bindkey '^r' history-incremental-search-backward      # [Ctrl-r] - Search backward incrementally for a specified string.
+                                                      # The string may begin with ^ to anchor the search to the beginning of the line.
+if [[ "${terminfo[khome]}" != "" ]]; then
+  bindkey "${terminfo[khome]}" beginning-of-line      # [Home] - Go to beginning of line
+fi
+if [[ "${terminfo[kend]}" != "" ]]; then
+  bindkey "${terminfo[kend]}"  end-of-line            # [End] - Go to end of line
+fi
+
+bindkey '^[[A' up-line-or-search                      # start typing + [Up-Arrow]/[Down-Arrow] -
+bindkey '^[[B' down-line-or-search                    # partial match against command history with arrows keys
+
+bindkey '^[[1;5C' forward-word                        # [Ctrl-RightArrow] - move forward one word
+bindkey '^[[1;5D' backward-word                       # [Ctrl-LeftArrow] - move backward one word
+
+if [[ "${terminfo[kcbt]}" != "" ]]; then
+  bindkey "${terminfo[kcbt]}" reverse-menu-complete   # [Shift-Tab] - move through the completion menu backwards
+fi
+
+bindkey '^?' backward-delete-char                     # [Backspace] - delete backward
+if [[ "${terminfo[kdch1]}" != "" ]]; then
+  bindkey "${terminfo[kdch1]}" delete-char            # [Delete] - delete forward
+else
+  bindkey "^[[3~" delete-char
+  bindkey "^[3;5~" delete-char
+  bindkey "\e[3~" delete-char
+fi
+
+
 # GPG
 export GPG_TTY=$(tty)
 
-# Fix broken tmux-256color bindings
-bindkey '^[[1~' beginning-of-line
-bindkey '^[[4~' end-of-line
-# Partial history match with up/down arrow keys
-bindkey '^[[A' up-line-or-search
-bindkey '^[[B' down-line-or-search
-
+# Grep highlight color (why is this an environment variable instead of an argument?)
 export GREP_COLOR='1;36'
 
 # Text editor
