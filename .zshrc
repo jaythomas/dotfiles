@@ -129,8 +129,12 @@ source ~/.bash_aliases
 #antibody bundle < ~/.zsh_plugins
 
 # Node/Yarn
-eval "$(fnm env --multi)"
+eval "$(fnm env --multi --use-on-cd)"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Ruby
+#source /usr/share/chruby/chruby.sh
+#source /usr/share/chruby/auto.sh
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
