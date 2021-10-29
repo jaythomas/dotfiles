@@ -128,8 +128,12 @@ source ~/.bash_aliases
 #source <(antibody init)
 #antibody bundle < ~/.zsh_plugins
 
+# Elixir/Erlang
+#. $HOME/.asdf/asdf.sh
+
 # Node/Yarn
-eval "$(fnm env --multi --use-on-cd)"
+eval "$(fnm env --use-on-cd)"
+#export PATH=$HOME/.fnm:$PATH
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Ruby
