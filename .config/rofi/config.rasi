@@ -1,0 +1,5 @@
+configuration {
+  modi: "window,run,drun";
+}
+
+@theme "./dark-blue.rasi"

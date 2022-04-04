@@ -1,7 +1,27 @@
 *
+
+!.ackrc
 !.bash_aliases
+
+# Don't ignore .config but ignore its contents
+!.config/
+.config/*
+
+!.config/ripgrep.conf
+
+!.config/rofi/
+!.config/rofi/*
+
+!.config/terminator/
+!.config/terminator/*
+
+!.gnupg/
+.gnupg/*
+!.gnupg/gpg-agent.conf
+
 !.gitconfig
 !.gitignore
 !.nanorc
 !.tmux.conf
 !.yarnrc
+!.zshrc

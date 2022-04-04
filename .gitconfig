@@ -6,3 +6,23 @@
 [alias]
 	logp = !git log --pretty=format:\"- %H %s\" $1^
 	last = log -1 HEAD
+	latest = describe --tags --abbrev=0
+[remote "origin"]
+	prune = true
+[commit]
+	gpgsign = true
+[advice]
+	detachedHead = false
+	addEmptyPathspec = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = false
+	ff = only
+[init]
+	defaultBranch = master
+[core]
+	ignorecase = false
