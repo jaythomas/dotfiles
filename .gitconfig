@@ -13,6 +13,7 @@
 	gpgsign = true
 [advice]
 	detachedHead = false
+	addEmptyPathspec = false
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -21,3 +22,7 @@
 [pull]
 	rebase = false
 	ff = only
+[init]
+	defaultBranch = master
+[core]
+	ignorecase = false
