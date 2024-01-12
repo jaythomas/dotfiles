@@ -7,13 +7,16 @@
 !.config/
 .config/*
 
+!/.config/fish
+!/.config/fish/**
+
 !.config/ripgrep.conf
 
 !.config/rofi/
-!.config/rofi/*
+!.config/rofi/**
 
 !.config/terminator/
-!.config/terminator/*
+!.config/terminator/**
 
 !.gnupg/
 .gnupg/*
