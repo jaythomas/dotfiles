@@ -7,6 +7,18 @@
 	logp = !git log --pretty=format:\"- %H %s\" $1^
 	last = log -1 HEAD
 	latest = describe --tags --abbrev=0
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  diff-highlight = true # Emulate git's diff-hightlight styling https://github.com/git/git/tree/master/contrib/diff-highlight
+  diff-so-fancy = false # Emulate diff-so-fancy (24-bit color)
+  navigate = true # use n and N to move between diff sections
+  light = false   # invert colors for light color schemes
+  side-by-side = true
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
 [remote "origin"]
 	prune = true
 [commit]
@@ -26,3 +38,6 @@
 	defaultBranch = master
 [core]
 	ignorecase = false
+  pager = delta
+[gpg]
+	program = gpg
