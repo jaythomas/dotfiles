@@ -1,0 +1,11 @@
+theme = "onedark"
+
+[editor]
+line-number = "relative"
+mouse = false
+
+[editor.file-picker]
+hidden = false
+
+[keys.insert]
+"C-c" = "normal_mode"

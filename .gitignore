@@ -7,8 +7,11 @@
 !.config/
 .config/*
 
-!/.config/fish
-!/.config/fish/**
+!.config/fish
+!.config/fish/**
+
+!.config/helix
+!.config/helix/**
 
 !.config/ripgrep.conf
 
