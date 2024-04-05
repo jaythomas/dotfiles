@@ -90,6 +90,8 @@ fi
 if [[ "${terminfo[kend]}" != "" ]]; then
   bindkey "${terminfo[kend]}"  end-of-line            # [End] - Go to end of line
 fi
+#bindkey '\e[OH' beginning-of-line
+#bindkey '\e[OF' end-of-line
 
 bindkey '^[[A' up-line-or-search                      # start typing + [Up-Arrow]/[Down-Arrow] -
 bindkey '^[[B' down-line-or-search                    # partial match against command history with arrows keys
@@ -142,3 +144,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Ripgrep
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep.conf"
