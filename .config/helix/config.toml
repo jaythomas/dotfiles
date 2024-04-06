@@ -1,11 +1,21 @@
-theme = "onedark"
+theme = "base16_transparent"
 
 [editor]
+auto-pairs = false
 line-number = "relative"
 mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
 
 [editor.file-picker]
 hidden = false
 
 [keys.insert]
 "C-c" = "normal_mode"
+
+[keys.normal]
+A-x = [ "extend_to_line_bounds", "trim_selections" ]
+backspace = "insert_mode"
