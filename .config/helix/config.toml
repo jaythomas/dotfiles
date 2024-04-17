@@ -17,5 +17,9 @@ hidden = false
 "C-c" = "normal_mode"
 
 [keys.normal]
-A-x = [ "extend_to_line_bounds", "trim_selections" ]
+C = "change_selection_noyank"
+D = "delete_selection_noyank"
+# https://github.com/helix-editor/helix/pull/4709
+#f = ["insert_mode", "@<ret>", "normal_mode"]
+A-x = ["extend_to_line_bounds", "trim_selections"]
 backspace = "insert_mode"
