@@ -17,9 +17,11 @@ hidden = false
 "C-c" = "normal_mode"
 
 [keys.normal]
-C = "change_selection_noyank"
-D = "delete_selection_noyank"
-# https://github.com/helix-editor/helix/pull/4709
-#f = ["insert_mode", "@<ret>", "normal_mode"]
 A-x = ["extend_to_line_bounds", "trim_selections"]
+C-down = ["extend_to_line_bounds", "delete_selection", "paste_after"] # move line up
+C-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"] # move line down
+C = "change_selection_noyank" # don't clobber register
+D = "delete_selection_noyank" # don't clobber register
+# Replace a character from normal mode? https://github.com/helix-editor/helix/pull/4709
+#f = ["insert_mode", "@<ret>", "normal_mode"]
 backspace = "insert_mode"
