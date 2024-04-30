@@ -13,6 +13,9 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
+[editor.lsp]
+display-messages = true
+
 [keys.insert]
 "C-c" = "normal_mode"
 
@@ -25,3 +28,6 @@ D = "delete_selection_noyank" # don't clobber register
 # Replace a character from normal mode? https://github.com/helix-editor/helix/pull/4709
 #f = ["insert_mode", "@<ret>", "normal_mode"]
 backspace = "insert_mode"
+
+[keys.select]
+D = "delete_selection_noyank"
