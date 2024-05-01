@@ -4,6 +4,7 @@ theme = "base16_transparent"
 auto-pairs = false
 line-number = "relative"
 mouse = false
+#rulers = [80, 120]
 
 [editor.cursor-shape]
 insert = "bar"
@@ -23,7 +24,7 @@ display-messages = true
 A-x = ["extend_to_line_bounds", "trim_selections"]
 C-down = ["extend_to_line_bounds", "delete_selection", "paste_after"] # move line up
 C-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"] # move line down
-C = "change_selection_noyank" # don't clobber register
+#C = "change_selection_noyank" # don't clobber register, todo: find an unused keybinding for this
 D = "delete_selection_noyank" # don't clobber register
 # Replace a character from normal mode? https://github.com/helix-editor/helix/pull/4709
 #f = ["insert_mode", "@<ret>", "normal_mode"]
