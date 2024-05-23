@@ -41,3 +41,5 @@
   pager = delta
 [gpg]
 	program = gpg
+[safe]
+	directory = *
